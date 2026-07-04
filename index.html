@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+
+    <!-- Primary Meta Tags -->
+    <title>Türk Tarihi Satrancı — Tarihi Savaşlar Tahtada</title>
+    <meta name="title" content="Türk Tarihi Satrancı — Tarihi Savaşlar Tahtada" />
+    <meta
+      name="description"
+      content="Osmanlı vs Timurlu (Ankara 1402) ve Yavuz vs Şah İsmail (Çaldıran 1514) savaşlarını satranç tahtasında oyna. Çevrimiçi çok oyunculu, yapay zekâ ve Türk tarihi dolu bir deneyim."
+    />
+    <meta name="keywords" content="türk satrancı, tarihi satranç, chess, osmanlı, türk tarihi, strateji, çok oyunculu, online, AI, çaldıran, ankara, timur, yavuz, şah ismail, türk tarihi satrancı" />
+    <meta name="author" content="Türk Tarihi Satrancı Ekibi" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Turkish" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Theme & PWA -->
+    <meta name="theme-color" content="#1c1917" />
+    <meta name="msapplication-TileColor" content="#1c1917" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Türk Tarihi Satrancı" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="application-name" content="Türk Tarihi Satrancı" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://turktarihsatranc.com/" />
+    <meta property="og:title" content="Türk Tarihi Satrancı — Tarihi Savaşlar Tahtada" />
+    <meta
+      property="og:description"
+      content="Osmanlı vs Timurlu ve Yavuz vs Şah İsmail savaşlarını satranç tahtasında oyna. Çevrimiçi, AI ve Türk tarihi dolu deneyim."
+    />
+    <meta property="og:image" content="https://turktarihsatranc.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Sultanın Gambiti" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://turktarihsatranc.com/" />
+    <meta name="twitter:title" content="Türk Tarihi Satrancı" />
+    <meta
+      name="twitter:description"
+      content="Osmanlı vs Timurlu savaşları. Çevrimiçi ve AI modlu Türk tarihi satrancı."
+    />
+    <meta name="twitter:image" content="https://turktarihsatranc.com/og-image.png" />
+    <meta name="twitter:creator" content="@turktarihsatranc" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Türk Tarihi Satrancı",
+        "description": "Osmanlı vs Timurlu ve Yavuz vs Şah İsmail savaşlarını satranç tahtasında oyna. Çevrimiçi çok oyunculu, yapay zekâ ve Türk tarihi dolu bir deneyim.",
+        "image": "https://turktarihsatranc.com/og-image.png",
+        "url": "https://turktarihsatranc.com/",
+        "author": {
+          "@type": "Organization",
+          "name": "Türk Tarihi Satrancı Ekibi"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Türk Tarihi Satrancı"
+        },
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Web Browser, Android, iOS",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "ratingCount": "1"
+        },
+        "genre": ["Strategy", "Board Game", "Educational"],
+        "gamePlatform": ["Web Browser", "Android", "iOS"],
+        "playMode": "MultiPlayer"
+      }
+    </script>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://turktarihsatranc.com/" />
+    <link rel="alternate" hreflang="tr" href="https://turktarihsatranc.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://turktarihsatranc.com/" />
+
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        overscroll-behavior: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #1c1917;
+        color: #f8f4e3;
+      }
+      /* Splash screen — manifest yüklenene kadar gösterilecek */
+      #app-splash {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #1c1917 0%, #44403c 50%, #064e3b 100%);
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      #app-splash.hide { opacity: 0; pointer-events: none; }
+      .splash-logo {
+        font-size: 3rem;
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.1); opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Splash screen (JS yüklenene kadar) -->
+    <div id="app-splash">
+      <div class="splash-logo">♛ ⚔</div>
+    </div>
+
+    <div id="root"></div>
+
+    <script>
+      // Splash screen'i gizle (sayfa yüklendikten sonra)
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var splash = document.getElementById('app-splash');
+          if (splash) {
+            splash.classList.add('hide');
+            setTimeout(function() { splash.remove(); }, 600);
+          }
+        }, 100);
+      });
+    </script>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
