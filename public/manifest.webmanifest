@@ -1,0 +1,50 @@
+{
+  "name": "Türk Tarihi Satrancı — Tarihi Savaşlar",
+  "short_name": "Türk Tarihi Satrancı",
+  "description": "Osmanlı vs Timurlu ve Yavuz vs Şah İsmail savaşlarını satranç tahtasında oyna. Çevrimiçi ve AI modlu Türk tarihi satrancı.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#1c1917",
+  "theme_color": "#1c1917",
+  "lang": "tr",
+  "dir": "ltr",
+  "categories": ["games", "strategy", "education"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Hızlı Eşleşme",
+      "short_name": "Eşleşme",
+      "description": "Hızlı çevrimiçi eşleşme",
+      "url": "/?action=matchmaking",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Yerel Savaş",
+      "short_name": "Yerel",
+      "description": "AI veya 2 kişilik yerel oyun",
+      "url": "/?action=local",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}
