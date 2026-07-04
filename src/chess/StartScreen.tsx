@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react';
 interface StartScreenProps {
   onOpenBattles: () => void;
   onOpenOnline: () => void;
+  onBackToLanding?: () => void;
 }
 
-export function StartScreen({ onOpenBattles, onOpenOnline }: StartScreenProps) {
+export function StartScreen({ onOpenBattles, onOpenOnline, onBackToLanding }: StartScreenProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -73,6 +74,17 @@ export function StartScreen({ onOpenBattles, onOpenOnline }: StartScreenProps) {
         .menu-up { animation: menuUp 0.8s ease-out both; }
         .menu-fade { animation: menuFade 1s ease-out both; }
       `}</style>
+
+      {/* Ana sayfaya dön */}
+      {onBackToLanding && (
+        <button
+          onClick={onBackToLanding}
+          className="fixed left-3 top-3 z-20 inline-flex items-center gap-1.5 rounded-lg bg-stone-800/70 px-3 py-1.5 text-xs text-amber-200 backdrop-blur transition active:scale-95 hover:bg-stone-700 sm:left-6 sm:top-6 sm:text-sm"
+          style={{ touchAction: 'manipulation' }}
+        >
+          ← Ana Sayfa
+        </button>
+      )}
 
       {/* Decorative swords on sides */}
       <div className="pointer-events-none absolute left-2 top-1/2 -translate-y-1/2 select-none text-5xl opacity-20 sm:left-6 sm:text-7xl">
