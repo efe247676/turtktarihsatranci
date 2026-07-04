@@ -7,6 +7,7 @@ import { OnlineMenu } from './chess/OnlineMenu';
 import { MatchmakingScreen } from './chess/MatchmakingScreen';
 import { InviteHostScreen } from './chess/InviteHostScreen';
 import { InviteGuestScreen } from './chess/InviteGuestScreen';
+import { LandingPage } from './chess/LandingPage';
 import { createInitialBoard, makeMove } from './chess/logic';
 import { findBestMove } from './chess/ai';
 import { CAMPAIGNS, type Campaign } from './chess/campaigns';
@@ -26,6 +27,7 @@ function createInitialState(): GameState {
 }
 
 type Screen =
+  | 'landing'
   | 'menu'
   | 'battleSelect'
   | 'battleIntro'
@@ -44,7 +46,7 @@ const AI_DEPTHS: Record<Difficulty, number> = {
 };
 
 export default function App() {
-  const [screen, setScreen] = useState<Screen>('menu');
+  const [screen, setScreen] = useState<Screen>('landing');
   const [state, setState] = useState<GameState>(createInitialState);
   const [aiEnabled, setAiEnabled] = useState(true);
   const [difficulty, setDifficulty] = useState<Difficulty>('medium');
@@ -248,11 +250,21 @@ export default function App() {
   const lastMove = state.history.length > 0 ? state.history[state.history.length - 1] : null;
 
   // Render by screen
+  if (screen === 'landing') {
+    return (
+      <LandingPage
+        onPlay={() => setScreen('menu')}
+        onOnline={() => setScreen('onlineMenu')}
+      />
+    );
+  }
+
   if (screen === 'menu') {
     return (
       <StartScreen
         onOpenBattles={handleOpenBattleSelect}
         onOpenOnline={handleOpenOnline}
+        onBackToLanding={() => setScreen('landing')}
       />
     );
   }
