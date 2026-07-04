@@ -1,0 +1,16 @@
+# robots.txt — Türk Tarihi Satrancı
+# https://turktarihsatranc.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://turktarihsatranc.com/sitemap.xml
+
+# Gizli sayfalar yok
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# Crawl-delay (sunucuyu yormamak için)
+Crawl-delay: 1
