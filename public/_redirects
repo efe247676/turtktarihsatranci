@@ -1,0 +1,11 @@
+# Netlify redirects (eğer Netlify'e deploy ederseniz)
+
+# SPA fallback — tüm route'lar index.html'e yönlendirilir
+/*    /index.html   200
+
+# Güvenlik başlıkları (opsiyonel)
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
